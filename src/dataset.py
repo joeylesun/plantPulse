@@ -32,8 +32,8 @@ def build_train_transform(use_augmentation: bool = True) -> transforms.Compose:
 
     Augmentation techniques (5 total, satisfies the ">=4 techniques" rubric item):
         1. RandomResizedCrop  - random zoom + crop
-        2. RandomHorizontalFlip - mirror the leaf
-        3. RandomRotation - rotate up to +-20 degrees
+        2. RandomRotation - rotate up to +-15 degrees
+        3. RandomHorizontalFlip - mirror the leaf
         4. ColorJitter - vary brightness/contrast/saturation (lighting robustness)
         5. RandomErasing - randomly black out patches (occlusion robustness)
     """
@@ -46,8 +46,8 @@ def build_train_transform(use_augmentation: bool = True) -> transforms.Compose:
 
     return transforms.Compose([
         transforms.RandomResizedCrop(IMG_SIZE, scale=(0.8, 1.0)),
+        transforms.RandomRotation(degrees=15),
         transforms.RandomHorizontalFlip(p=0.5),
-        transforms.RandomRotation(degrees=20),
         transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
         transforms.ToTensor(),
         transforms.Normalize(IMAGENET_MEAN, IMAGENET_STD),
