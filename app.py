@@ -34,7 +34,6 @@ from src.utils import setup_logger, RateLimiter, safe_call
 
 load_dotenv()
 
-# ---- App-level configuration -------------------------------------------------
 st.set_page_config(
     page_title="PlantDoc - AI Plant Disease Detector",
     page_icon="🌿",
@@ -92,7 +91,6 @@ def run_rag_question(rag, question, class_filter=None):
     return rag.answer(question, class_filter=class_filter)
 
 
-# ---- Session state -----------------------------------------------------------
 if "client_id" not in st.session_state:
     st.session_state.client_id = str(uuid.uuid4())
 if "chat_history" not in st.session_state:
@@ -101,7 +99,6 @@ if "last_prediction" not in st.session_state:
     st.session_state.last_prediction = None
 
 
-# ---- UI ----------------------------------------------------------------------
 st.title("🌿 PlantDoc")
 st.caption("AI-powered plant disease detection and treatment advisor")
 
