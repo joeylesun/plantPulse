@@ -2,8 +2,6 @@
 
 Trained model checkpoints and the persistent RAG vector store.
 
-These files are NOT committed to the repo (they're in `.gitignore`) because they're large. They're produced by running the training notebooks and the knowledge-base build script.
-
 ## Files created by running the notebooks / scripts
 
 - **`plantdoc_resnet50.pt`** — the main fine-tuned ResNet-50 checkpoint. Produced by `notebooks/02_training.ipynb`. Used by `app.py` at inference time. ~100 MB.
@@ -15,6 +13,6 @@ These files are NOT committed to the repo (they're in `.gitignore`) because they
 
 If you want to skip training, pretrained checkpoints are available at:
 
-- `plantdoc_resnet50.pt`: [add your Drive/Box link after uploading]
+- `plantdoc_resnet50.pt`: (https://duke.box.com/s/nqheapi10no9djcp8r2dvryy83df8ygd)
 
 Place downloaded files here and skip straight to step 5 in `SETUP.md`.
