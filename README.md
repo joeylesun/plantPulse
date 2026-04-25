@@ -4,7 +4,11 @@ A computer-vision and RAG-powered assistant that identifies plant diseases from 
 
 ## What it Does
 
-PlantPulse is a Streamlit web application that combines a fine-tuned ResNet-50 vision model with a Retrieval-Augmented Generation (RAG) pipeline to help home gardeners diagnose sick plants and take action. A user uploads a photo of a leaf, the vision model classifies it into one of 38 plant-disease categories (or "healthy") using a model fine-tuned on the PlantVillage dataset of about 87,000 images. Grad-CAM produces a heatmap showing which regions of the leaf drove the prediction for explainability. A LangChain + ChromaDB RAG pipeline then retrieves symptoms, treatment steps, and prevention advice for the predicted disease from a hand-curated knowledge base, with the final answer synthesized by GPT-4o-mini. Users can ask follow-up questions in a chat interface, scoped to their specific diagnosis. Unlike a generic "ask an LLM" approach, the RAG pipeline keeps answers grounded in specific, actionable facts like exact fungicide names, resistant variety names, and temperature ranges that favor outbreaks.
+PlantPulse is a Streamlit web app that helps home gardeners figure out what's wrong with their plants. You upload a photo of a sick leaf, and the app gives you a diagnosis, shows you which part of the leaf the model focused on, and pulls up actual treatment advice you can use.
+
+Under the hood, it's a fine-tuned ResNet-50 trained on the PlantVillage dataset (about 87,000 images covering 38 plant-disease combinations) for the diagnosis. Then I added Grad-CAM on top so users can see a heatmap of where the model was looking when it made the prediction, which matters for trust. The treatment advice comes from a RAG pipeline I built with LangChain and ChromaDB, pulling from a knowledge base I wrote covering all 38 disease classes. GPT-4o-mini handles the final answer synthesis, but the actual facts come from the knowledge base, not from whatever the LLM picked up during training.
+
+There's also a chat interface for follow-up questions, scoped to whatever disease was just diagnosed. The reason I went with RAG instead of just calling an LLM directly is that vague AI answers aren't useful for someone who actually needs to treat a plant. The KB has specific fungicide names, resistant cultivar names, and temperature ranges that favor outbreaks. RAG keeps the answers grounded in those specifics.
 
 ## Quick Start
 
@@ -54,7 +58,7 @@ Fine-tuned ResNet-50 on PlantVillage (about 87K images across 38 classes), 70/15
 | ResNet-50, frozen backbone (2 epochs) | 95.69% |
 | ResNet-50, fine-tuned, no augmentation (2 epochs) | 97.70% |
 | ResNet-50, fine-tuned + augmented (2 epochs) | 97.15% |
-| **ResNet-50, fine-tuned + augmented (10 epochs, final)** | **98.06%** |
+| **ResNet-50, fine-tuned + augmented (4 epochs, final)** | **98.06%** |
 
 The final fine-tuned model hits 98.06% test accuracy, a 95.4 percentage point improvement over the random baseline. Fine-tuning gives a clear ~1.5pp boost over the frozen-backbone variant, showing that adapting the ResNet-50 backbone to plant disease features earns its compute cost.
 
