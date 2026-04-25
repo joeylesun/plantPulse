@@ -1,12 +1,3 @@
-"""
-Error analysis utilities: find the model's worst classes and most-confused pairs.
-
-Rubric item addressed: error analysis on challenging cases (similar-looking diseases).
-
-Usage:
-    See notebooks/04_error_analysis.ipynb for a full walkthrough.
-"""
-
 from typing import List, Tuple, Dict
 import numpy as np
 

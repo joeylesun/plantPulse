@@ -1,13 +1,3 @@
-"""
-Baseline: random class guesser.
-
-Rubric item addressed: baseline model (random guesser).
-
-Having a random baseline establishes "what accuracy does the model need to beat
-to have learned anything at all." For 38 balanced classes, random is 1/38 =~ 2.6%.
-Our fine-tuned ResNet-50 should crush this - if it doesn't, something's wrong.
-"""
-
 import numpy as np
 import torch
 from torch.utils.data import DataLoader

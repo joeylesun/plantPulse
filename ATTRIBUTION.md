@@ -24,7 +24,7 @@ File-level attribution (where AI scaffolding was applied):
 | `app.py` | Drafted by Claude. I tested the full UI flow end-to-end and verified prediction, Grad-CAM, RAG advice, and chat all work. Also made various minor feature tweaks myself.|
 | `notebooks/*.ipynb` | Notebook structure and code cells drafted by Claude. I ran all six notebooks, debugged issues during runs, interpreted results, and wrote the discussion sections in my own voice based on what I observed. |
 
-I mainly used Claude to accelerate the production of this project, because AI is extremely efficient at writing implementations of methods. I understand each and every bit of code that was AI generated, and debugged and reviewed all pieces myself.
+I mainly used Claude to accelerate the production of this project, because AI is extremely efficient at writing implementations of methods. I understand every bit of code that was AI generated, and debugged and reviewed all pieces myself.
 
 ## External libraries and tools
 

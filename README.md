@@ -12,7 +12,7 @@ This project runs locally via Streamlit. Follow these steps:
 
 1. **Clone the repo and install dependencies**
 ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/joeylesun/plantPulse.git
    cd plantPulse
    pip install -r requirements.txt
 ```

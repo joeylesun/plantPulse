@@ -7,13 +7,13 @@ Detailed installation and usage guide.
 - **Python 3.10 or newer** (tested on 3.10 and 3.11; 3.12 works but Chroma/torch wheels are slower to land)
 - **~10 GB free disk** (PlantVillage is ~1 GB, model checkpoints + ChromaDB add another ~300 MB)
 - **GPU strongly recommended for training** (CPU training will take ~10x longer). Inference runs fine on CPU.
-- **An OpenAI API key** for the RAG pipeline (uses `gpt-4o-mini`, which is cheap — budget a few cents for all of the evaluations)
+- **An OpenAI API key** for the RAG pipeline (uses `gpt-4o-mini`, which is cheap; budget a few cents for all of the evaluations)
 
 ## 1. Clone and install
 
 ```bash
-git clone <your-repo-url>
-cd plantdoc
+git clone https://github.com/joeylesun/plantPulse.git
+cd plantPulse
 python -m venv .venv
 source .venv/bin/activate      
 pip install --upgrade pip
@@ -72,7 +72,7 @@ Run all cells. This will:
 
 **Expected runtime**: ~1.5 hours on a consumer GPU (RTX 3080/4070), ~10+ hours on CPU.
 
-**If you don't want to train from scratch**, download the pretrained checkpoint from `[add your Drive/Box link here after uploading]` and place it at `models/plantdoc_resnet50.pt`.
+**If you don't want to train from scratch**, download the pretrained checkpoint from (https://duke.box.com/s/nqheapi10no9djcp8r2dvryy83df8ygd) and place it at `models/plantdoc_resnet50.pt`.
 
 ## 5. Build the RAG knowledge base
 

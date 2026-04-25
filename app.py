@@ -35,7 +35,7 @@ from src.utils import setup_logger, RateLimiter, safe_call
 load_dotenv()
 
 st.set_page_config(
-    page_title="PlantDoc - AI Plant Disease Detector",
+    page_title="PlantPulse - AI Plant Disease Detector",
     page_icon="🌿",
     layout="wide",
 )
@@ -99,7 +99,7 @@ if "last_prediction" not in st.session_state:
     st.session_state.last_prediction = None
 
 
-st.title("🌿 PlantDoc")
+st.title("🌿 PlantPulse")
 st.caption("AI-powered plant disease detection and treatment advisor")
 
 with st.sidebar:
