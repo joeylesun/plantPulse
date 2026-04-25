@@ -1,4 +1,4 @@
-# SETUP.md — PlantDoc
+# SETUP.md — PlantPulse
 
 Detailed installation and usage guide. 
 

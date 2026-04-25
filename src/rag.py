@@ -98,7 +98,7 @@ def load_vectorstore(persist_directory: str = DEFAULT_PERSIST_DIR) -> Chroma:
 # Prompt template - tells the LLM to stay grounded in retrieved context
 RAG_PROMPT = ChatPromptTemplate.from_messages([
     ("system",
-     "You are PlantDoc, a helpful assistant specialized in plant disease "
+     "You are PlantPulse, a helpful assistant specialized in plant disease "
      "diagnosis and treatment. Use ONLY the retrieved context below to answer. "
      "If the context does not contain the answer, say you don't have that "
      "information rather than guessing. Keep responses concise and actionable - "

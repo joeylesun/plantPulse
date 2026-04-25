@@ -1,10 +1,10 @@
-# 🌿 PlantDoc - AI Plant Disease Detector + Treatment Advisor
+# 🌿 PlantPulse - AI Plant Disease Detector + Treatment Advisor
 
 A computer-vision and RAG-powered assistant that identifies plant diseases from leaf photos and retrieves grounded treatment advice from a curated knowledge base of 38 plant-disease conditions.
 
 ## What it Does
 
-PlantDoc is a Streamlit web application that combines a fine-tuned ResNet-50 vision model with a Retrieval-Augmented Generation (RAG) pipeline to help home gardeners diagnose sick plants and take action. A user uploads a photo of a leaf, the vision model classifies it into one of 38 plant-disease categories (or "healthy") using a model fine-tuned on the PlantVillage dataset of about 87,000 images. Grad-CAM produces a heatmap showing which regions of the leaf drove the prediction for explainability. A LangChain + ChromaDB RAG pipeline then retrieves symptoms, treatment steps, and prevention advice for the predicted disease from a hand-curated knowledge base, with the final answer synthesized by GPT-4o-mini. Users can ask follow-up questions in a chat interface, scoped to their specific diagnosis. Unlike a generic "ask an LLM" approach, the RAG pipeline keeps answers grounded in specific, actionable facts like exact fungicide names, resistant variety names, and temperature ranges that favor outbreaks.
+PlantPulse is a Streamlit web application that combines a fine-tuned ResNet-50 vision model with a Retrieval-Augmented Generation (RAG) pipeline to help home gardeners diagnose sick plants and take action. A user uploads a photo of a leaf, the vision model classifies it into one of 38 plant-disease categories (or "healthy") using a model fine-tuned on the PlantVillage dataset of about 87,000 images. Grad-CAM produces a heatmap showing which regions of the leaf drove the prediction for explainability. A LangChain + ChromaDB RAG pipeline then retrieves symptoms, treatment steps, and prevention advice for the predicted disease from a hand-curated knowledge base, with the final answer synthesized by GPT-4o-mini. Users can ask follow-up questions in a chat interface, scoped to their specific diagnosis. Unlike a generic "ask an LLM" approach, the RAG pipeline keeps answers grounded in specific, actionable facts like exact fungicide names, resistant variety names, and temperature ranges that favor outbreaks.
 
 ## Quick Start
 
@@ -70,12 +70,12 @@ Grad-CAM visualizations in `notebooks/05_gradcam_visualization.ipynb` partially 
 
 ### RAG pipeline
 
-Evaluated on a 10-question golden set (`notebooks/06_rag_evaluation.ipynb`) comparing PlantDoc-RAG against vanilla GPT-4o-mini without retrieval. Grounding score = fraction of expected key phrases (specific fungicide names, variety names, temperature ranges) present in the answer.
+Evaluated on a 10-question golden set (`notebooks/06_rag_evaluation.ipynb`) comparing PlantPulse-RAG against vanilla GPT-4o-mini without retrieval. Grounding score = fraction of expected key phrases (specific fungicide names, variety names, temperature ranges) present in the answer.
 
 | System | Mean grounding score |
 |---|---|
 | Vanilla GPT-4o-mini | 73.3% |
-| **PlantDoc RAG** | **83.3%** |
+| **PlantPulse RAG** | **83.3%** |
 
 RAG outperforms vanilla by 10 percentage points. The gap is smaller than I expected because GPT-4o-mini has clearly absorbed a lot of horticultural knowledge during pretraining (extension service docs, gardening sites, Wikipedia), so for common diseases like apple scab it can name specific fungicides without retrieval. Where RAG clearly wins is on questions where vanilla hedges or refuses to be specific, like "Is there a cure for citrus greening?" - vanilla responds with "as of my last knowledge update..." while RAG gives a direct, grounded answer because the KB contains the fact explicitly.
 
