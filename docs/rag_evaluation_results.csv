@@ -1,0 +1,46 @@
+question,rag_score,vanilla_score,rag_answer,vanilla_answer
+What fungicide should I use for apple scab?,1.0,1.0,"Quick Diagnosis: Apple Scab is caused by a fungal infection, leading to olive-green to black spots on leaves and dark lesions on fruit.
+
+Immediate Actions: Apply fungicide sprays containing captan, my","For managing apple scab, several fungicides can be effective. Here are some commonly used options:
+
+1. **Chlorothalonil**: A broad-spectrum fungicide that is effective against apple scab. It should be"
+Is there a cure for citrus greening?,1.0,0.3333333333333333,"Quick Diagnosis: No, there is no cure for citrus greening (Huanglongbing).
+
+Immediate Actions: Infected trees should be removed and destroyed to prevent the spread of the disease. 
+
+Long-term Preventi","As of my last knowledge update in October 2023, there is no definitive cure for citrus greening disease, also known as Huanglongbing (HLB). This disease is caused by bacteria transmitted by the Asian "
+How do I prevent potato late blight?,1.0,0.6666666666666666,"Quick Diagnosis: Late blight in potatoes is caused by the pathogen Phytophthora infestans and is favored by cool, wet, and humid conditions.
+
+Immediate Actions: 
+1. Plant certified disease-free seed p","Preventing potato late blight, caused by the pathogen *Phytophthora infestans*, involves a combination of cultural practices, resistant varieties, and careful management. Here are some effective strat"
+What does early blight look like on tomato?,0.6666666666666666,0.6666666666666666,"Quick Diagnosis: Early Blight on tomato presents as dark brown to black lesions with concentric rings ('bull's-eye' pattern) on older, lower leaves first, accompanied by yellowing around the lesions. ","Early blight, caused by the fungus *Alternaria solani*, is a common disease affecting tomato plants. Here are some key characteristics of early blight:
+
+1. **Leaf Spots**: The most noticeable symptom "
+Which virus causes curled yellow leaves in tomato?,1.0,1.0,"Quick Diagnosis: The virus causing curled yellow leaves in tomatoes is the Tomato Yellow Leaf Curl Virus (TYLCV).
+
+Immediate Actions: Remove and destroy infected plants to reduce the virus reservoir. ",Curled yellow leaves in tomato plants are often a symptom of infection by the Tomato Yellow Leaf Curl Virus (TYLCV). This virus is transmitted primarily by whiteflies and can cause significant damage 
+Best treatment for grape black rot?,1.0,0.3333333333333333,"Quick Diagnosis: Grape black rot is caused by the fungal infection Guignardia bidwellii, characterized by reddish-brown leaf spots and brown rot on fruit.
+
+Immediate Actions: Apply fungicides such as ","Grape black rot, caused by the fungus *Guignardia bidwellii*, can be a serious issue for grape growers. Effective management and treatment strategies include:
+
+1. **Cultural Practices**:
+   - **Sanita"
+How to manage spider mites on tomato?,1.0,1.0,"Quick Diagnosis: Look for fine yellow stippling or bronzing on leaves, fine webbing, yellowing and dropping leaves, and tiny mites on leaf undersides.
+
+Immediate Actions: 
+1. Blast plants with a stron","Managing spider mites on tomato plants involves a combination of prevention, monitoring, and control strategies. Here are some effective methods to help you manage spider mites:
+
+### 1. **Prevention**"
+What resistant varieties exist for apple scab?,0.0,1.0,I don't have that information.,"Apple scab, caused by the fungus *Venturia inaequalis*, is a significant disease affecting apple trees. To manage this disease, many apple cultivars have been developed with varying degrees of resista"
+How do I control powdery mildew on squash organically?,1.0,0.6666666666666666,"Quick Diagnosis: Powdery mildew appears as white, powdery fungal growth on leaves and stems, leading to yellowing and dying leaves.
+
+Immediate Actions: Spray potassium bicarbonate, sulfur, or neem oil","Controlling powdery mildew on squash organically involves a combination of preventive measures and treatments. Here are some effective strategies:
+
+### Preventive Measures
+
+1. **Choose Resistant Varie"
+What temperatures favor corn gray leaf spot?,0.6666666666666666,0.6666666666666666,"Quick Diagnosis: Gray Leaf Spot is favored by warm temperatures.
+
+Immediate Actions: Monitor temperatures in your cornfield.
+
+Long-term Prevention: Aim to manage field conditions to avoid temperatures","Gray leaf spot of corn, caused by the fungus *Cercospora zeae-maydis*, is favored by specific environmental conditions, particularly temperature and humidity. The optimal temperatures for the developm"
