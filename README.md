@@ -43,8 +43,8 @@ For detailed installation troubleshooting, GPU setup, and deployment notes, see 
 
 ## Video Links
 
-- **Demo Video** (3-5 min, non-technical pitch): [add link after upload]
-- **Technical Walkthrough** (5-10 min, for ML engineers): [add link after upload]
+- **Demo Video** https://duke.box.com/s/43yzhq38koidf2cjt721q02e1mzpu81a
+- **Technical Walkthrough** https://duke.box.com/s/jhhwg1tu6du8kat4xxy22vhvowj17pp5
 
 ## Evaluation
 
