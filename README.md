@@ -50,7 +50,7 @@ For detailed installation troubleshooting, GPU setup, and deployment notes, see 
 
 ### Vision model
 
-Fine-tuned ResNet-50 on PlantVillage (about 87K images across 38 classes), 70/15/15 train/val/test split, 10 epochs, Adam optimizer with cosine LR schedule.
+Fine-tuned ResNet-50 on PlantVillage (about 87K images across 38 classes), 70/15/15 train/val/test split, Adam optimizer with cosine LR schedule. Originally planned for 10 epochs but stopped early at epoch 4 once validation accuracy plateaued above 97%.
 
 | Model variant | Test accuracy |
 |---|---|
